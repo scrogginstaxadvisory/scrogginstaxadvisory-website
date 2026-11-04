@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" type="image/png" href="assets/shield.png">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Scroggins Tax and Advisory</title>
+<meta name="description" content="Tax preparation and planning for individuals and small business owners. Veteran-owned, serving clients remotely.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: white page, navy hero band, plain-language service grid, a real filing calendar strip. */
+:root {
+  --navy: #223452;
+  --navy-deep: #18263e;
+  --ink: #1d2533;
+  --muted: #586274;
+  --line: #dde2ea;
+  --bg: #ffffff;
+  --surface: #f3f5f8;
+  --on-navy: #ffffff;
+  --on-navy-muted: #c3cbd9;
+  --steel: #8a919c;
+  --logo-plate: transparent;
+  --focus: #3d6bb3;
+  --display: "Spectral", Georgia, "Times New Roman", serif;
+  --body: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #8fa7d1; --navy-deep: #0f1828; --ink: #e6eaf1; --muted: #a3adbd; --line: #2c3a52;
+    --bg: #121a28; --surface: #18233a; --on-navy: #ffffff; --on-navy-muted: #b8c3d6; --steel: #9aa3b0;
+    --logo-plate: #ffffff; --focus: #8fb4f0; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --navy: #8fa7d1; --navy-deep: #0f1828; --ink: #e6eaf1; --muted: #a3adbd; --line: #2c3a52;
+  --bg: #121a28; --surface: #18233a; --on-navy: #ffffff; --on-navy-muted: #b8c3d6; --steel: #9aa3b0;
+  --logo-plate: #ffffff; --focus: #8fb4f0; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--steel); }
+
+/* Header */
+header.site { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+.brand { display: block; background: var(--logo-plate); border-radius: 6px; padding: 4px 8px; line-height: 0; }
+.brand img { height: 46px; width: auto; }
+nav.main { display: flex; align-items: center; gap: 24px; font-size: 0.95rem; font-weight: 500; }
+nav.main a { text-decoration: none; color: var(--muted); }
+nav.main a:hover { color: var(--ink); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font: 600 0.95rem/1 var(--body); padding: 14px 22px; border-radius: 6px; text-decoration: none; border: 2px solid transparent; cursor: pointer; }
+.btn-primary { background: #223452; color: #ffffff; }
+.btn-primary:hover { background: #2c4269; }
+.btn-light { background: #ffffff; color: #223452; }
+.btn-light:hover { background: #e9eef6; }
+.btn-ghost { border-color: rgba(255,255,255,0.45); color: #ffffff; }
+.btn-ghost:hover { border-color: #ffffff; }
+nav.main .btn { color: #ffffff; padding: 11px 18px; }
+@media (max-width: 860px) { nav.main a:not(.btn) { display: none; } .brand img { height: 38px; } }
+@media (max-width: 420px) { nav.main .btn { padding: 10px 12px; font-size: 0.85rem; } .brand img { height: 32px; } }
+
+/* Hero */
+.hero { background: #223452; color: var(--on-navy); }
+:root[data-theme="dark"] .hero { background: var(--navy-deep); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .hero { background: var(--navy-deep); } }
+.hero .wrap { display: grid; grid-template-columns: 1.35fr 1fr; gap: 56px; align-items: center; padding-block: 72px 80px; }
+.hero .eyebrow { color: var(--on-navy-muted); }
+.hero h1 { font-size: clamp(2.3rem, 5.2vw, 3.7rem); margin-top: 14px; font-weight: 500; }
+.hero h1 span { display: block; }
+.hero .lede { margin-top: 20px; font-size: 1.15rem; color: var(--on-navy-muted); max-width: 34em; }
+.hero .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.badges { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 32px; padding: 0; list-style: none; font-size: 0.9rem; color: var(--on-navy-muted); }
+.badges li { display: flex; align-items: center; gap: 8px; }
+.badges li::before { content: ""; width: 7px; height: 7px; background: var(--on-navy-muted); transform: rotate(45deg); }
+
+.calendar { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.18); border-radius: 10px; padding: 24px; min-width: 0; }
+.calendar h2 { font-family: var(--body); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--on-navy-muted); }
+.calendar ol { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 0; }
+.calendar li { display: grid; grid-template-columns: 74px 1fr; gap: 16px; padding-block: 14px; border-top: 1px solid rgba(255,255,255,0.14); }
+.calendar li:first-child { border-top: 0; }
+.calendar .date { font-weight: 600; font-size: 0.95rem; color: #ffffff; font-variant-numeric: tabular-nums; line-height: 1.3; }
+.calendar .date small { display: block; color: var(--on-navy-muted); font-size: 0.72rem; }
+.calendar .what { font-size: 0.95rem; color: var(--on-navy-muted); }
+.calendar .what strong { color: #ffffff; font-weight: 600; display: block; }
+.calendar .note { margin-top: 14px; font-size: 0.8rem; color: var(--on-navy-muted); }
+
+/* Sections */
+section.block { padding-block: 88px; }
+section.alt { background: var(--surface); }
+.section-head { max-width: 640px; margin-bottom: 44px; }
+.section-head h2 { font-size: clamp(1.9rem, 3.6vw, 2.6rem); margin-top: 10px; color: var(--ink); }
+.section-head p { margin-top: 14px; color: var(--muted); }
+
+.services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.service { background: var(--bg); padding: 28px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.service h3 { font-size: 1.3rem; color: var(--ink); }
+.service p { color: var(--muted); font-size: 0.97rem; }
+.service .fine { font-size: 0.82rem; color: var(--steel); margin-top: auto; padding-top: 6px; }
+@media (max-width: 960px) { .services { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .services { grid-template-columns: 1fr; } }
+
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; counter-reset: step; }
+.steps li { counter-increment: step; display: flex; flex-direction: column; gap: 10px; padding-top: 20px; border-top: 2px solid var(--navy); min-width: 0; }
+.steps li::before { content: "Step " counter(step); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--steel); }
+.steps h3 { font-size: 1.35rem; color: var(--ink); }
+.steps p { color: var(--muted); font-size: 0.97rem; }
+.secure { margin-top: 40px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--muted); font-size: 0.95rem; display: flex; gap: 14px; align-items: flex-start; }
+.secure svg { flex: none; margin-top: 3px; }
+.secure strong { color: var(--ink); }
+@media (max-width: 760px) { .steps { grid-template-columns: 1fr; gap: 28px; } }
+
+.about { display: block; }
+.about .mark { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 28px; display: flex; justify-content: center; }
+.about .mark img { width: 120px; height: auto; }
+.about .copy { min-width: 0; max-width: 760px; }
+.about .copy h2 { font-size: clamp(1.9rem, 3.6vw, 2.6rem); margin-top: 10px; }
+.about .copy > p { margin-top: 16px; color: var(--muted); }
+.creds { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; padding: 0; list-style: none; }
+.creds li { padding-block: 12px; border-top: 1px solid var(--line); display: flex; flex-direction: column; }
+.creds li span { font-size: 0.8rem; color: var(--steel); letter-spacing: 0.04em; }
+.creds li strong { font-weight: 600; color: var(--ink); }
+@media (max-width: 760px) { .about { grid-template-columns: 1fr; gap: 28px; } .about .mark { justify-content: flex-start; } .creds { grid-template-columns: 1fr; } }
+
+.contact { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+.contact .section-head { margin-bottom: 0; }
+.contact-list { list-style: none; margin: 0; padding: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); min-width: 0; }
+.contact-list li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 22px; border-top: 1px solid var(--line); flex-wrap: wrap; }
+.contact-list li:first-child { border-top: 0; }
+.contact-list .label { font-size: 0.8rem; color: var(--steel); letter-spacing: 0.04em; display: block; }
+.contact-list .value { font-weight: 600; color: var(--ink); user-select: all; overflow-wrap: anywhere; }
+.copy-btn { font: 600 0.8rem/1 var(--body); color: var(--navy); background: transparent; border: 1px solid var(--line); border-radius: 5px; padding: 8px 12px; cursor: pointer; }
+.copy-btn:hover { border-color: var(--navy); }
+.contact .cta-row { margin-top: 28px; }
+@media (max-width: 860px) { .contact { grid-template-columns: 1fr; gap: 32px; } }
+
+footer.site { border-top: 1px solid var(--line); padding-block: 36px 44px; font-size: 0.85rem; color: var(--muted); }
+footer.site .wrap { display: grid; gap: 14px; }
+footer.site .row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+footer.site .legal { font-size: 0.8rem; color: var(--steel); max-width: 820px; }
+
+@media (max-width: 860px) {
+  .hero .wrap { grid-template-columns: 1fr; gap: 40px; padding-block: 52px 60px; }
+  section.block { padding-block: 64px; }
+}
+
+.theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: transparent; color: var(--muted); cursor: pointer; flex: none; }
+.theme-toggle:hover { color: var(--ink); border-color: var(--muted); }
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle[data-mode="dark"] .icon-sun { display: block; }
+.theme-toggle[data-mode="dark"] .icon-moon { display: none; }
+@media (max-width: 420px) { nav.main { gap: 10px; } .theme-toggle { width: 36px; height: 36px; } }
+.service-cta { background: var(--surface); }
+.about-lists { margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.about-lists > div { min-width: 0; padding-top: 18px; border-top: 1px solid var(--line); }
+.list-title { font-family: var(--body); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--steel); }
+.checks { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 10px; }
+.checks li { position: relative; padding-left: 26px; color: var(--ink); font-weight: 500; }
+.checks li::before { content: ""; position: absolute; left: 2px; top: 0.45em; width: 11px; height: 6px; border-left: 2px solid var(--navy); border-bottom: 2px solid var(--navy); transform: rotate(-45deg); }
+@media (max-width: 760px) { .about-lists { grid-template-columns: 1fr; gap: 24px; } }
+.text-link { margin-top: auto; padding-top: 6px; font-weight: 600; color: var(--navy); text-decoration: none; }
+.text-link:hover { text-decoration: underline; }
+</style>
+
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Scroggins Tax and Advisory home"><img src="assets/logo.png" alt="Scroggins Tax &amp; Advisory" width="905" height="270"></a>
+    <nav class="main" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#how">How it works</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch to dark mode" title="Switch to dark mode">
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2.3M12 19.2v2.3M2.5 12h2.3M19.2 12h2.3M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <a class="btn btn-primary" href="#contact" data-book>Book a free call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Tax preparation &amp; planning</p>
+        <h1><span>Clarity.</span><span>Compliance.</span><span>Confidence.</span></h1>
+        <p class="lede">Friendly, straightforward tax help for individuals, families, and small business owners. Everything can be done from home, by phone or video.</p>
+        <div class="actions">
+          <a class="btn btn-light" href="#contact" data-book>Book a free consultation</a>
+          <a class="btn btn-ghost" href="#services">See how I can help</a>
+        </div>
+        <ul class="badges">
+          <li>Veteran-owned</li>
+          <li>Authorized IRS e-file Provider</li>
+          <li>Work with me from anywhere</li>
+        </ul>
+      </div>
+      <aside class="calendar" aria-labelledby="cal-title">
+        <h2 id="cal-title">Key dates for your 2026 taxes</h2>
+        <ol>
+          <li><p class="date">Jan 15<small>2027</small></p><p class="what"><strong>Last 2026 estimated payment</strong>For self-employed people and others who pay quarterly</p></li>
+          <li><p class="date">Mar 15<small>2027</small></p><p class="what"><strong>S-Corp returns due</strong>Or file an extension by this date</p></li>
+          <li><p class="date">Apr 15<small>2027</small></p><p class="what"><strong>Personal tax returns due</strong>Also the first 2027 estimated payment</p></li>
+        </ol>
+        <p class="note">Now booking appointments for this tax season.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="block" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Services</p>
+        <h2>How I can help</h2>
+        <p>Whether it's your first time hiring a tax preparer or you run a growing business, you'll get clear answers and no judgment.</p>
+      </div>
+      <div class="services">
+        <article class="service">
+          <h3>Personal tax returns</h3>
+          <p>Federal and state returns for individuals and families, including freelancers and side gigs.</p>
+        </article>
+        <article class="service">
+          <h3>Small business &amp; S-Corp returns</h3>
+          <p>Tax returns for S-Corporations and other small businesses, including the K-1 forms your owners need.</p>
+        </article>
+        <article class="service">
+          <h3>Tax planning</h3>
+          <p>A plan to keep more of what you earn, and quarterly payment amounts so April doesn't bring a surprise bill.</p>
+        </article>
+        <article class="service">
+          <h3>Bookkeeping</h3>
+          <p>Organized books, so you always know where your business stands and tax time goes faster.</p>
+        </article>
+        <article class="service">
+          <h3>Starting or growing a business</h3>
+          <p>Help choosing a business structure, deciding whether an S-Corp makes sense, and getting set up right from day one.</p>
+        </article>
+        <article class="service">
+          <h3>Budgeting &amp; money coaching</h3>
+          <p>A budget you can stick to, a plan for paying down debt and saving, and someone to help you stay on track.</p>
+        </article>
+        <article class="service">
+          <h3>Taxes on investments</h3>
+          <p>Clear answers on how stocks, crypto, rental property, and retirement accounts affect your taxes.</p>
+          <p class="fine">I explain the tax side only and don't recommend specific investments.</p>
+        </article>
+        <article class="service">
+          <h3>Retirement plans for business owners</h3>
+          <p>Setting up a plan, like a SEP-IRA or Solo 401(k), that saves for your future and lowers your taxes now.</p>
+        </article>
+        <article class="service service-cta">
+          <h3>Not sure what you need?</h3>
+          <p>Let's talk. The first consultation is free, and you'll know the price before any work begins.</p>
+          <a class="text-link" href="#contact" data-book>Book a free call →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">How it works</p>
+        <h2>Three simple steps, all from home</h2>
+      </div>
+      <ol class="steps">
+        <li><h3>Book a free call</h3><p>Pick a time that works for you. We'll talk about what you need, and you'll know the price upfront.</p></li>
+        <li><h3>Send your documents securely</h3><p>You'll get a secure link to upload your W-2s, 1099s, and other forms. No printing, no driving anywhere.</p></li>
+        <li><h3>Review and file</h3><p>I'll prepare your return, walk you through it, and file it once you say it looks good.</p></li>
+      </ol>
+      <div class="secure">
+        <svg width="18" height="20" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 1.5 4v5.2c0 4.6 3.2 8.6 7.5 9.8 4.3-1.2 7.5-5.2 7.5-9.8V4L9 1Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        <p><strong>For your protection, please don't email tax documents or your Social Security number.</strong> I'll send you a secure upload link instead.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="about">
+    <div class="wrap about">
+      <div class="copy">
+        <p class="eyebrow">About</p>
+        <h2>Hi, I'm Bert Scroggins</h2>
+        <p>I started Scroggins Tax and Advisory to give people the kind of tax help I'd want for myself: honest, clear, and personal. I'm a U.S. military veteran with a background in accounting, business, and analytics.</p>
+        <p>No question is too basic. My job is to make your taxes make sense, and to make sure you understand your return before it's filed.</p>
+        <div class="about-lists">
+          <div>
+            <h3 class="list-title">Credentials</h3>
+            <ul class="checks">
+              <li>B.S. in Accounting, MBA, and M.S. in Business Analytics</li>
+              <li>U.S. military veteran</li>
+              <li>Authorized IRS e-file Provider</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="list-title">What you can expect</h3>
+            <ul class="checks">
+              <li>Plain-language answers, never jargon</li>
+              <li>A price agreed on before any work begins</li>
+              <li>A reply within one business day</li>
+              <li>Secure handling of your documents</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="contact">
+    <div class="wrap contact">
+      <div class="section-head">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's talk</h2>
+        <p>Book a free consultation or reach out directly. Most meetings are by phone or video, and I can meet in person in the Norfolk area when needed.</p>
+        <div class="cta-row"><a class="btn btn-primary" href="#contact" data-book>Book a free consultation</a></div>
+      </div>
+      <ul class="contact-list">
+        <li><div><span class="label">Email</span><span class="value" id="email-value">info@scrogginstaxadvisory.com</span></div><button class="copy-btn" type="button" data-copy="email-value">Copy</button></li>
+        <li><div><span class="label">Phone</span><span class="value" id="phone-value" data-phone></span></div><button class="copy-btn" type="button" data-copy="phone-value">Copy</button></li>
+        <li><div><span class="label">Hours</span><span class="value">By appointment: weekday evenings and Saturdays</span></div></li>
+        <li><div><span class="label">Response time</span><span class="value">Email anytime. I'll reply within 1 business day.</span></div></li>
+        <li><div><span class="label">Location</span><span class="value">Norfolk, VA</span></div></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="row">
+      <span>© 2026 Scroggins Tax and Advisory LLC</span>
+      <a href="https://www.linkedin.com/company/scroggins-tax-advisory/" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="legal">Scroggins Tax and Advisory LLC is not a CPA firm and does not provide audit, review, or compilation services. We do not provide investment advice or recommend specific securities. Information on this site is general and is not tax advice for your situation.</p>
+  </div>
+</footer>
+
+<script>
+// Edit these two lines to update the whole site.
+const PHONE = "(757) 646-7003";
+const BOOKING_URL = ""; // Paste the Google Calendar booking page link here when it's ready.
+
+document.querySelectorAll("[data-phone]").forEach(el => { el.textContent = PHONE; });
+if (BOOKING_URL) {
+  document.querySelectorAll("[data-book]").forEach(a => { a.href = BOOKING_URL; a.target = "_blank"; a.rel = "noopener"; });
+}
+
+// Light / dark switch. Follows the device setting until the visitor picks one.
+(() => {
+  const root = document.documentElement;
+  const btn = document.getElementById("theme-toggle");
+  const media = window.matchMedia("(prefers-color-scheme: dark)");
+  let saved = null;
+  try { saved = localStorage.getItem("theme"); } catch (e) {}
+  if (saved === "light" || saved === "dark") root.setAttribute("data-theme", saved);
+  const current = () => root.getAttribute("data-theme") || (media.matches ? "dark" : "light");
+  const label = () => {
+    const next = current() === "dark" ? "light" : "dark";
+    btn.setAttribute("aria-label", "Switch to " + next + " mode");
+    btn.title = "Switch to " + next + " mode";
+    btn.dataset.mode = current();
+  };
+  btn.addEventListener("click", () => {
+    const next = current() === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("theme", next); } catch (e) {}
+    label();
+  });
+  media.addEventListener?.("change", label);
+  new MutationObserver(label).observe(root, { attributes: true, attributeFilter: ["data-theme"] });
+  label();
+})();
+
+document.querySelectorAll("[data-copy]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const el = document.getElementById(btn.dataset.copy);
+    const text = el.textContent.trim();
+    const done = () => { btn.textContent = "Copied"; setTimeout(() => { btn.textContent = "Copy"; }, 1600); };
+    const fallback = () => { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+    try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+  });
+});
+</script>
+
+</body>
+</html>
